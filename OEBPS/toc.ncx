@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+  <head>
+    <meta name="dtb:uid" content="urn:isbn:9781663050632"/>
+    <meta name="dtb:depth" content="2"/>
+    <meta name="dtb:totalPageCount" content="12"/>
+    <meta name="dtb:maxPageNumber" content="12"/>
+  </head>
+  <docTitle><text>Magnetic Literacy</text></docTitle>
+  <navMap>
+    <navPoint id="mo1" playOrder="1">
+      <navLabel><text>Unit Opener Cryptids: Fact or Fiction?</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#mo1"/>
+    </navPoint>
+    <navPoint id="sec1_2" playOrder="2">
+      <navLabel><text>Notice and Wonder</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#sec1_2"/>
+    </navPoint>
+    <navPoint id="sec1_3" playOrder="3">
+      <navLabel><text>Unit Vocabulary</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#sec1_3"/>
+    </navPoint>
+    <navPoint id="sec1_4" playOrder="4">
+      <navLabel><text>Meet the Anchor Text</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#sec1_4"/>
+    </navPoint>
+    <navPoint id="sec1_5" playOrder="5">
+      <navLabel><text>Meet the Unit Texts</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#sec1_5"/>
+    </navPoint>
+    <navPoint id="sec1_6" playOrder="6">
+      <navLabel><text>Preview the End-of-Unit Writing</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#sec1_6"/>
+    </navPoint>
+    <navPoint id="sec2_1a" playOrder="15">
+      <navLabel><text>The Warnings of Shinpai</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S02.xhtml#sec2_1a"/>
+    </navPoint>
+  </navMap>
+  <pageList>
+    <pageTarget id="p7" type="normal" playOrder="7" value="2">
+      <navLabel><text>2</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_2"/>
+    </pageTarget>
+    <pageTarget id="p8" type="normal" playOrder="8" value="3">
+      <navLabel><text>3</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_3"/>
+    </pageTarget>
+    <pageTarget id="p9" type="normal" playOrder="9" value="4">
+      <navLabel><text>4</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_4"/>
+    </pageTarget>
+    <pageTarget id="p10" type="normal" playOrder="10" value="5">
+      <navLabel><text>5</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_5"/>
+    </pageTarget>
+    <pageTarget id="p11" type="normal" playOrder="11" value="6">
+      <navLabel><text>6</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_6"/>
+    </pageTarget>
+    <pageTarget id="p12" type="normal" playOrder="12" value="7">
+      <navLabel><text>7</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_7"/>
+    </pageTarget>
+    <pageTarget id="p13" type="normal" playOrder="13" value="8">
+      <navLabel><text>8</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_8"/>
+    </pageTarget>
+    <pageTarget id="p14" type="normal" playOrder="14" value="9">
+      <navLabel><text>9</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml#page_9"/>
+    </pageTarget>
+    <pageTarget id="p16" type="normal" playOrder="16" value="10">
+      <navLabel><text>10</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S02.xhtml#page_10"/>
+    </pageTarget>
+    <pageTarget id="p17" type="normal" playOrder="17" value="11">
+      <navLabel><text>11</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S02.xhtml#page_11"/>
+    </pageTarget>
+    <pageTarget id="p18" type="normal" playOrder="18" value="12">
+      <navLabel><text>12</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S02.xhtml#page_12"/>
+    </pageTarget>
+    <pageTarget id="p19" type="normal" playOrder="19" value="13">
+      <navLabel><text>13</text></navLabel>
+      <content src="xhtml/MLR04_NN_EN_SW_U05_M01_S02.xhtml#page_13"/>
+    </pageTarget>
+  </pageList>
+</ncx>

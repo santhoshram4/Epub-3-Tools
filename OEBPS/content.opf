@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="pub-id">urn:isbn:9781663050632</dc:identifier>
+    <dc:title>Magnetic Literacy</dc:title>
+    <dc:language>en</dc:language>
+    <meta property="dcterms:modified">2024-05-05T12:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="img_cover_jpg" href="images/cover.jpg" media-type="image/jpeg"/>
+    <item id="img_MLR04_U05_p011_001_epub_jpg" href="images/MLR04_U05_p011_001_epub.jpg" media-type="image/jpeg"/>
+    <item id="img_MLR04_U05_p13_001_epub_jpg" href="images/MLR04_U05_p13_001_epub.jpg" media-type="image/jpeg"/>
+    <item id="img_MLR04_U05_SessionIntro_S01_ePubCrop_jpg" href="images/MLR04_U05_SessionIntro_S01_ePubCrop.jpg" media-type="image/jpeg"/>
+    <item id="img_MLR3-6_icon_learning-goal_jpg" href="images/MLR3-6_icon_learning-goal.jpg" media-type="image/jpeg"/>
+    <item id="img_p11_2_jpg" href="images/p11_2.jpg" media-type="image/jpeg"/>
+    <item id="img_p12_1_jpg" href="images/p12_1.jpg" media-type="image/jpeg"/>
+    <item id="img_p12_2_jpg" href="images/p12_2.jpg" media-type="image/jpeg"/>
+    <item id="img_p12_3_jpg" href="images/p12_3.jpg" media-type="image/jpeg"/>
+    <item id="img_p12_4_jpg" href="images/p12_4.jpg" media-type="image/jpeg"/>
+    <item id="img_p12_5_jpg" href="images/p12_5.jpg" media-type="image/jpeg"/>
+    <item id="img_p2_2_jpg" href="images/p2_2.jpg" media-type="image/jpeg"/>
+    <item id="img_p2_3_jpg" href="images/p2_3.jpg" media-type="image/jpeg"/>
+    <item id="img_p2_4_jpg" href="images/p2_4.jpg" media-type="image/jpeg"/>
+    <item id="img_p2_5_jpg" href="images/p2_5.jpg" media-type="image/jpeg"/>
+    <item id="img_p4_jpg" href="images/p4.jpg" media-type="image/jpeg"/>
+    <item id="img_p6_jpg" href="images/p6.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_1_jpg" href="images/p7_1.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_10_jpg" href="images/p7_10.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_11_jpg" href="images/p7_11.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_12_jpg" href="images/p7_12.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_13_jpg" href="images/p7_13.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_2_jpg" href="images/p7_2.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_3_jpg" href="images/p7_3.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_4_jpg" href="images/p7_4.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_5_jpg" href="images/p7_5.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_6_jpg" href="images/p7_6.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_7_jpg" href="images/p7_7.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_8_jpg" href="images/p7_8.jpg" media-type="image/jpeg"/>
+    <item id="img_p7_9_jpg" href="images/p7_9.jpg" media-type="image/jpeg"/>
+    <item id="css_template_css" href="styles/template.css" media-type="text/css"/>
+    <item id="Cover" href="xhtml/Cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="MLR04_NN_EN_SW_U05_M01_S01" href="xhtml/MLR04_NN_EN_SW_U05_M01_S01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="MLR04_NN_EN_SW_U05_M01_S02" href="xhtml/MLR04_NN_EN_SW_U05_M01_S02.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="Cover"/>
+    <itemref idref="MLR04_NN_EN_SW_U05_M01_S01"/>
+    <itemref idref="MLR04_NN_EN_SW_U05_M01_S02"/>
+  </spine>
+  <guide>
+    <reference type="toc" title="Table of Contents" href="nav.xhtml"/>
+    <reference type="text" title="Beginning" href="xhtml/Cover.xhtml"/>
+  </guide>
+</package>
