@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
-  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:identifier id="pub-id">urn:isbn:9781663050632</dc:identifier>
-    <dc:title>Magnetic Literacy</dc:title>
-    <dc:language>en</dc:language>
-    <meta property="dcterms:modified">2024-05-05T12:00:00Z</meta>
-  </metadata>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title id="en_title" xml:lang="en">[mention book title]</dc:title>
+<dc:creator id="id">[mention author]</dc:creator>
+<dc:source id="isbn">urn:isbn:[mention isbn id]</dc:source>
+<dc:identifier id="bookid">urn:isbn:[mention isbn id]</dc:identifier>
+<dc:format>[mention pages]</dc:format>
+<dc:type>Text</dc:type>
+<dc:rights>© [mention year] [mention publisher/rights holder]</dc:rights>
+<dc:language>en</dc:language>
+<dc:date>[mention year]</dc:date>
+<dc:publisher>[mention publisher]</dc:publisher>
+<meta refines="#en_title" property="title-type">main</meta>
+<meta refines="#en_title" property="file-as">[mention book title]</meta>
+<meta refines="#isbn" property="source-of">pagination</meta>
+<meta property="dcterms:modified">2026-05-06T12:21:35Z</meta>
+<meta name="cover" content="cover-image"/>
+<meta property="schema:accessMode">textual</meta>
+<meta property="schema:accessMode">visual</meta>
+<meta property="schema:accessModeSufficient">textual,visual</meta>
+<meta property="schema:accessModeSufficient">textual</meta>
+<meta property="schema:accessibilityFeature">alternativeText</meta>
+<meta property="schema:accessibilityFeature">structuralNavigation</meta>
+<meta property="schema:accessibilityFeature">pageBreakMarkers</meta>
+<meta property="schema:accessibilityFeature">pageNavigation</meta>
+<meta property="schema:accessibilityFeature">ARIA</meta>
+<meta property="schema:accessibilityFeature">readingOrder</meta>
+<meta property="schema:accessibilityFeature">displayTransformability</meta>
+<meta property="schema:accessibilityFeature">tableOfContents</meta>
+<meta property="schema:accessibilityHazard">none</meta>
+<meta property="schema:accessibilitySummary">[mention accessibility summary]</meta>
+<link href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa" rel="dcterms:conformsTo"/>
+<meta refines="#id" property="role" scheme="marc:relators">aut</meta>
+<meta refines="#id" property="file-as">[mention author file-as]</meta>
+</metadata>
   <manifest>
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
     <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>

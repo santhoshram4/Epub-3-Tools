@@ -1,6 +1,7 @@
 import os
 import re
 import glob
+import datetime
 from bs4 import BeautifulSoup
 
 class EpubAutomationTool:
@@ -98,11 +99,11 @@ class EpubAutomationTool:
   <nav epub:type="toc" id="toc">
     <h1>Table of Contents</h1>
     <ol>
-{list_items}    </ol>
+{list_items}     </ol>
   </nav>
   <nav epub:type="page-list" id="page-list" hidden="hidden">
     <ol>
-{page_items}    </ol>
+{page_items}     </ol>
   </nav>
 </body>
 </html>'''
@@ -137,14 +138,45 @@ class EpubAutomationTool:
             manifest.append(f'    <item id="{item_id}" href="xhtml/{f}" media-type="application/xhtml+xml"/>')
             spine.append(f'    <itemref idref="{item_id}"/>')
 
+        # Updated Metadata Section
+        current_time = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+        
         opf_template = f'''<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
-  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:identifier id="pub-id">urn:isbn:{self.isbn}</dc:identifier>
-    <dc:title>{self.title}</dc:title>
-    <dc:language>en</dc:language>
-    <meta property="dcterms:modified">2024-05-05T12:00:00Z</meta>
-  </metadata>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title id="en_title" xml:lang="en">[mention book title]</dc:title>
+<dc:creator id="id">[mention author]</dc:creator>
+<dc:source id="isbn">urn:isbn:[mention isbn id]</dc:source>
+<dc:identifier id="bookid">urn:isbn:[mention isbn id]</dc:identifier>
+<dc:format>[mention pages]</dc:format>
+<dc:type>Text</dc:type>
+<dc:rights>© [mention year] [mention publisher/rights holder]</dc:rights>
+<dc:language>en</dc:language>
+<dc:date>[mention year]</dc:date>
+<dc:publisher>[mention publisher]</dc:publisher>
+<meta refines="#en_title" property="title-type">main</meta>
+<meta refines="#en_title" property="file-as">[mention book title]</meta>
+<meta refines="#isbn" property="source-of">pagination</meta>
+<meta property="dcterms:modified">{current_time}</meta>
+<meta name="cover" content="cover-image"/>
+<meta property="schema:accessMode">textual</meta>
+<meta property="schema:accessMode">visual</meta>
+<meta property="schema:accessModeSufficient">textual,visual</meta>
+<meta property="schema:accessModeSufficient">textual</meta>
+<meta property="schema:accessibilityFeature">alternativeText</meta>
+<meta property="schema:accessibilityFeature">structuralNavigation</meta>
+<meta property="schema:accessibilityFeature">pageBreakMarkers</meta>
+<meta property="schema:accessibilityFeature">pageNavigation</meta>
+<meta property="schema:accessibilityFeature">ARIA</meta>
+<meta property="schema:accessibilityFeature">readingOrder</meta>
+<meta property="schema:accessibilityFeature">displayTransformability</meta>
+<meta property="schema:accessibilityFeature">tableOfContents</meta>
+<meta property="schema:accessibilityHazard">none</meta>
+<meta property="schema:accessibilitySummary">[mention accessibility summary]</meta>
+<link href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa" rel="dcterms:conformsTo"/>
+<meta refines="#id" property="role" scheme="marc:relators">aut</meta>
+<meta refines="#id" property="file-as">[mention author file-as]</meta>
+</metadata>
   <manifest>
 {"\n".join(manifest)}
   </manifest>
@@ -159,7 +191,7 @@ class EpubAutomationTool:
         
         with open(os.path.join(self.path, "content.opf"), "w", encoding="utf-8") as f:
             f.write(opf_template)
-        print("Success: OPF (with Guide tag), NCX, and NAV generated!")
+        print("Success: OPF (with updated Metadata), NCX, and NAV generated!")
 
 # --- Execution ---
 if __name__ == "__main__":
