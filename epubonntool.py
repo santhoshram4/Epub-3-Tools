@@ -142,10 +142,10 @@ class EpubAutomationTool:
         current_time = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
         
         opf_template = f'''<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0">
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/ a11y: http://www.idpf.org/epub/vocab/package/a11y/#" xml:lang="[mention language]">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
 <dc:title id="en_title" xml:lang="en">[mention book title]</dc:title>
-<dc:creator id="id">[mention author]</dc:creator>
+<dc:creator id="id">[mention createo]</dc:creator>
 <dc:source id="isbn">urn:isbn:[mention isbn id]</dc:source>
 <dc:identifier id="bookid">urn:isbn:[mention isbn id]</dc:identifier>
 <dc:format>[mention pages]</dc:format>
