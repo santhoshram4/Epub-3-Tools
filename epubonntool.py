@@ -107,6 +107,7 @@ class EpubAutomationTool:
   </nav>
 </body>
 </html>'''
+        
         with open(os.path.join(self.path, "nav.xhtml"), "w", encoding="utf-8") as f:
             f.write(nav_template)
 
