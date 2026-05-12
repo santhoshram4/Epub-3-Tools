@@ -11,7 +11,7 @@
 <p class="cn-b" id="unit2-s2"><span id="sec2_1"><span class="dotted">Unit 2 / Module 1 / Session 2</span></span></p>
 <div class="unitopener_b">
 <figure>
-<p class="image_int"><img alt="" class="w100" src="../images/MLR04_U02_p013_001_epub.jpg" aria-hidden="true"/></p>
+<p class="image_int"><img alt="" class="w100" role="presentation" src="../images/MLR04_U02_p013_001_epub.jpg" aria-hidden="true"/></p>
 </figure>
 <h1 class="D-head-sansw" epub:type="title" id="sec2_1a">Read &amp; Analyze <span class="block"/><span class="A-head">The Last Cuentista, Part 1</span></h1>
 <div class="box-unit">
@@ -48,7 +48,7 @@
 </div>
 <div aria-hidden="true"><span aria-hidden="true" aria-label="12" epub:type="pagebreak" id="page_12" role="doc-pagebreak"/></div>
 <section>
-<h2 class="b-head" epub:type="title" id="sec2-2">Unlock the Text</h2>
+<h2 class="b-head" epub:type="title">Unlock the Text</h2>
 <section>
 <h3 class="c-headt" epub:type="title">Vocabulary</h3>
 <p class="noindent">Read each word, definition, and example sentence in the chart.</p>
