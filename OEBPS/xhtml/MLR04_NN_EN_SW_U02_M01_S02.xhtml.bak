@@ -53,9 +53,14 @@
 <h3 class="c-headt" epub:type="title">Vocabulary</h3>
 <p class="noindent">Read each word, definition, and example sentence in the chart.</p>
 <table class="table_b">
+<colgroup>
+<col class="w33"/>
+<col class="w34"/>
+<col class="w33"/>
+</colgroup>
 <thead>
 <tr>
-<th class="tdb_1r"><p class="tabhead"><b>Word</b></p></th>
+<th class="tdb_1r" scope="col"><p class="tabhead"><b>Word</b></p></th>
 <th class="tdb_1r" scope="col"><p class="tabhead"><b>Definition</b></p></th>
 <th class="tdb_1" scope="col"><p class="tabhead"><b>Example Sentence</b></p></th>
 </tr>
@@ -77,16 +82,10 @@
 <section>
 <h3 class="c-head" epub:type="title">Background Knowledge</h3>
 <p class="noindent">Read to learn about important terms you’ll see in <i>The Last Cuentista.</i></p>
-<ul class="bullets">
+<ul class="bullets" role="list">
 <li class="bulls"><span aria-hidden="true">•</span><span class="spaceb"><span class="sr-only"> </span></span>A <b>comet</b> is an object made of dust and ice that orbits, or travels around, the sun. Comets look like they have cloudy tails. People have told stories about comets for over 2,000 years. One of the most famous comets is <b>Halley’s Comet</b>, which can be seen from Earth every 75 to 76 years.</li>
 <li class="bulls"><span aria-hidden="true">•</span><span class="spaceb"><span class="sr-only"> </span></span>A <b>nagual</b> (NAH-wal) is a mythical being or animal spirit that acts as a protector or trickster. Naguals are found in traditional stories from Mexico and Central America. In some stories, a nagual can “shapeshift” into different animals.</li>
 </ul>
-
-<ol class="bullets">
-<li class="bulls"><span aria-hidden="true">•</span><span class="spaceb"><span class="sr-only"> </span></span>A <b>comet</b> is an object made of dust and ice that orbits, or travels around, the sun. Comets look like they have cloudy tails. People have told stories about comets for over 2,000 years. One of the most famous comets is <b>Halley’s Comet</b>, which can be seen from Earth every 75 to 76 years.</li>
-<li class="bulls"><span aria-hidden="true">•</span><span class="spaceb"><span class="sr-only"> </span></span>A <b>nagual</b> (NAH-wal) is a mythical being or animal spirit that acts as a protector or trickster. Naguals are found in traditional stories from Mexico and Central America. In some stories, a nagual can “shapeshift” into different animals.</li>
-</ol>
-
 <figure>
 <p class="imagecap"><img alt="" class="w50" role="presentation" src="../images/p12.jpg" aria-hidden="true"/></p>
 </figure>

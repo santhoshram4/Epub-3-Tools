@@ -1,6 +1,7 @@
 import os
 import glob
 import datetime
+import html
 from bs4 import BeautifulSoup
 
 class EpubAccessibilityReporter:
@@ -41,7 +42,6 @@ class EpubAccessibilityReporter:
                         elif alt_val.strip() == "":
                             if role_val != "presentation":
                                 file_errors.append({"type": "Warning", "line": line_no, "msg": "Empty alt found. Add role='presentation' for decorative images."})
-                            # else: Inga alt="" matrum role="presentation" irukku, so ignore pannidum.
 
                     # 2. Heading ID Check
                     headings = soup.find_all(['h1', 'h2', 'h3'])
@@ -50,15 +50,13 @@ class EpubAccessibilityReporter:
                         if not h.get('id'):
                             file_errors.append({"type": "Error", "line": line_no, "msg": f"Heading <{h.name}> missing an 'id'."})
 
-                    # 3. First Section under Body Check (New Update)
+                    # 3. First Section under Body Check
                     body_tag = soup.find('body')
                     if body_tag:
-                        # body-ku kela irukura muthal section tag-ah matum edukiroam
                         first_section = body_tag.find('section')
                         if first_section:
                             line_no = first_section.sourceline
                             
-                            # Attributes validation
                             has_role = first_section.get('role')
                             has_epub_type = first_section.get('epub:type')
                             has_aria_label = first_section.get('aria-labelledby')
@@ -78,6 +76,40 @@ class EpubAccessibilityReporter:
                                     "line": line_no, 
                                     "msg": f"First <section> under body is missing required attributes: {attrs_str}."
                                 })
+
+                    # 4. Table Validation
+                    tables = soup.find_all('table')
+                    for table in tables:
+                        line_no = table.sourceline
+                        if not table.find('colgroup'):
+                            file_errors.append({
+                                "type": "Error",
+                                "line": line_no,
+                                "msg": "Table is missing a <colgroup> element."
+                            })
+
+                    # 5. Table Header<th> Validation
+                    ths = soup.find_all('th')
+                    for th in ths:
+                        line_no = th.sourceline
+                        if not th.get('scope'):
+                            file_errors.append({
+                                "type": "Error",
+                                "line": line_no,
+                                "msg": "Table header <th> is missing a 'scope' attribute."
+                            })
+
+                    # 6. List Validation (<ul> and <ol>) (New Update)
+                    lists = soup.find_all(['ul', 'ol'])
+                    for lisele in lists:
+                        line_no = lisele.sourceline
+                        # List tag la role attribute irukanu check panroam
+                        if not lisele.get('role'):
+                            file_errors.append({
+                                "type": "Error",
+                                "line": line_no,
+                                "msg": f"List <{lisele.name}> is missing a 'role' attribute."
+                            })
 
                 # (Additional checks for lang attribute etc can stay here)
 
@@ -111,13 +143,14 @@ class EpubAccessibilityReporter:
                 .file-card {{ background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }}
                 .filename {{ font-weight: bold; font-size: 1.2em; color: #2980b9; display: block; margin-bottom: 10px; }}
                 table {{ width: 100%; border-collapse: collapse; margin-top: 10px; }}
-                th, td {{ padding: 12px; text-align: left; border-bottom: 1px solid #eee; }}
+                th, td {{ padding: 12px; text-align: left; border-bottom: 1px solid #eee; vertical-align: middle; }}
                 th {{ background-color: #f8f9fa; color: #333; }}
-                .line-no {{ font-weight: bold; color: #555; width: 80px; }}
-                .error-type {{ font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; }}
+                .line-no {{ font-weight: bold; color: #555; width: 120px; }}
+                .type-col {{ width: 120px; }}
+                .error-type {{ font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; display: inline-block; text-align: center; width: 70px; }}
                 .error {{ color: #c0392b; background: #f9ebea; }}
                 .warning {{ color: #d35400; background: #fef5e7; }}
-                .msg {{ color: #34495e; }}
+                .msg {{ color: #34495e; line-height: 1.5; white-space: normal; word-break: normal; }}
             </style>
         </head>
         <body>
@@ -131,14 +164,15 @@ class EpubAccessibilityReporter:
             <div class="file-card">
                 <span class="filename">📄 {item["filename"]}</span>
                 <table>
-                    <tr><th>Line</th><th>Type</th><th>Issue Description</th></tr>'''
+                    <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>'''
             for err in item['errors']:
                 type_class = err['type'].lower()
+                safe_msg = html.escape(err['msg'])
                 html_content += f'''
                     <tr>
                         <td class="line-no">Line {err['line']}</td>
-                        <td><span class="error-type {type_class}">{err['type']}</span></td>
-                        <td class="msg">{err['msg']}</td>
+                        <td class="type-col"><span class="error-type {type_class}">{err['type']}</span></td>
+                        <td class="msg">{safe_msg}</td>
                     </tr>'''
             html_content += "</table></div>"
 
