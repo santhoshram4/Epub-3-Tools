@@ -50,6 +50,35 @@ class EpubAccessibilityReporter:
                         if not h.get('id'):
                             file_errors.append({"type": "Error", "line": line_no, "msg": f"Heading <{h.name}> missing an 'id'."})
 
+                    # 3. First Section under Body Check (New Update)
+                    body_tag = soup.find('body')
+                    if body_tag:
+                        # body-ku kela irukura muthal section tag-ah matum edukiroam
+                        first_section = body_tag.find('section')
+                        if first_section:
+                            line_no = first_section.sourceline
+                            
+                            # Attributes validation
+                            has_role = first_section.get('role')
+                            has_epub_type = first_section.get('epub:type')
+                            has_aria_label = first_section.get('aria-labelledby')
+                            
+                            missing_attrs = []
+                            if not has_role:
+                                missing_attrs.append("'role'")
+                            if not has_epub_type:
+                                missing_attrs.append("'epub:type'")
+                            if not has_aria_label:
+                                missing_attrs.append("'aria-labelledby'")
+                                
+                            if missing_attrs:
+                                attrs_str = ", ".join(missing_attrs)
+                                file_errors.append({
+                                    "type": "Error", 
+                                    "line": line_no, 
+                                    "msg": f"First <section> under body is missing required attributes: {attrs_str}."
+                                })
+
                 # (Additional checks for lang attribute etc can stay here)
 
             except Exception as e:
