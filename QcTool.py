@@ -2,6 +2,7 @@ import os
 import glob
 import datetime
 import html
+import re  # Fixed regex to perfectly handle escaped HTML entities and quotes
 from bs4 import BeautifulSoup
 
 class EpubAccessibilityReporter:
@@ -43,12 +44,18 @@ class EpubAccessibilityReporter:
                             if role_val != "presentation":
                                 file_errors.append({"type": "Warning", "line": line_no, "msg": "Empty alt found. Add role='presentation' for decorative images."})
 
-                    # 2. Heading ID Check
+                    # 2. Heading Check (ID & epub:type Validation)
                     headings = soup.find_all(['h1', 'h2', 'h3'])
                     for h in headings:
                         line_no = h.sourceline
+                        
+                        # ID attribute check
                         if not h.get('id'):
                             file_errors.append({"type": "Error", "line": line_no, "msg": f"Heading <{h.name}> missing an 'id'."})
+                        
+                        # epub:type attribute check
+                        if not h.get('epub:type'):
+                            file_errors.append({"type": "Error", "line": line_no, "msg": f"Heading <{h.name}> missing an 'epub:type' attribute."})
 
                     # 3. First Section under Body Check
                     body_tag = soup.find('body')
@@ -98,12 +105,28 @@ class EpubAccessibilityReporter:
                                 "line": line_no,
                                 "msg": "Table header <th> is missing a 'scope' attribute."
                             })
+                        if not th.find('p'):
+                            file_errors.append({
+                                "type": "Error",
+                                "line": line_no,
+                                "msg": "Table header <th> must contain a <p> tag."
+                            })
 
-                    # 6. List Validation (<ul> and <ol>) (New Update)
+                    # 6. Table Data<td> Validation
+                    tds = soup.find_all('td')
+                    for td in tds:
+                        line_no = td.sourceline
+                        if not td.find('p'):
+                            file_errors.append({
+                                "type": "Error",
+                                "line": line_no,
+                                "msg": "Table cell <td> must contain a <p> tag."
+                            })
+
+                    # 7. List Validation (<ul> and <ol>)
                     lists = soup.find_all(['ul', 'ol'])
                     for lisele in lists:
                         line_no = lisele.sourceline
-                        # List tag la role attribute irukanu check panroam
                         if not lisele.get('role'):
                             file_errors.append({
                                 "type": "Error",
@@ -111,7 +134,18 @@ class EpubAccessibilityReporter:
                                 "msg": f"List <{lisele.name}> is missing a 'role' attribute."
                             })
 
-                # (Additional checks for lang attribute etc can stay here)
+                    # 8. Figure Validation
+                    figures = soup.find_all('figure')
+                    for fig in figures:
+                        line_no = fig.sourceline
+                        first_child = fig.find(True) 
+                        
+                        if not first_child or first_child.name != 'p':
+                            file_errors.append({
+                                "type": "Error",
+                                "line": line_no,
+                                "msg": "The <figure> tag must contain a <p> tag directly before the <img> tag."
+                            })
 
             except Exception as e:
                 file_errors.append({"type": "Error", "line": "N/A", "msg": f"File read error: {str(e)}"})
@@ -151,6 +185,7 @@ class EpubAccessibilityReporter:
                 .error {{ color: #c0392b; background: #f9ebea; }}
                 .warning {{ color: #d35400; background: #fef5e7; }}
                 .msg {{ color: #34495e; line-height: 1.5; white-space: normal; word-break: normal; }}
+                .msg b {{ color: #2c3e50; background-color: #eaecef; padding: 2px 4px; border-radius: 4px; font-family: Consolas, monospace; }}
             </style>
         </head>
         <body>
@@ -168,11 +203,18 @@ class EpubAccessibilityReporter:
             for err in item['errors']:
                 type_class = err['type'].lower()
                 safe_msg = html.escape(err['msg'])
+                
+                # FIXED REGEX SOLUTION:
+                # 1. (&#x27;|&#39;|').*?(&#x27;|&#39;|') -> Handles standard single quotes and all html-escaped variations perfectly.
+                # 2. &lt;.*?&gt; -> Handles html-escaped tags like &lt;colgroup&gt; or &lt;p&gt;.
+                # 3. <.*?> -> Handles any raw tag elements.
+                bolded_msg = re.sub(r"((?:&#x27;|&#39;|').*?(?:&#x27;|&#39;|')|&lt;.*?&gt;|<.*?>)", lambda m: f"<b>{m.group(0)}</b>", safe_msg)
+                
                 html_content += f'''
                     <tr>
                         <td class="line-no">Line {err['line']}</td>
                         <td class="type-col"><span class="error-type {type_class}">{err['type']}</span></td>
-                        <td class="msg">{safe_msg}</td>
+                        <td class="msg">{bolded_msg}</td>
                     </tr>'''
             html_content += "</table></div>"
 
