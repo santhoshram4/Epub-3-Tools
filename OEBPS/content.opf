@@ -1,85 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" xmlns:epub="http://www.idpf.org/2007/ops" xmlns:ibooks="http://apple.com/ibooks/html-extensions" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" xml:lang="es">
-<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-<meta property="schema:accessibilitySummary">This publication contains well-structured HTML with page mapping and alt text.</meta>
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/ a11y: http://www.idpf.org/epub/vocab/package/a11y/#" xml:lang="en">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title id="en_title" xml:lang="en">Chapter1</dc:title>
+<dc:creator id="id">Curriculum Associates</dc:creator>
+<dc:source id="isbn">urn:isbn:</dc:source>
+<dc:identifier id="bookid">urn:isbn:</dc:identifier>
+<dc:format>10 Pages</dc:format>
+<dc:type>Text</dc:type>
+<dc:rights>© 2027 Curriculum Associates, LLC</dc:rights>
+<dc:language>en</dc:language>
+<dc:date>2026</dc:date>
+<dc:publisher>Curriculum Associates</dc:publisher>
+<meta refines="#en_title" property="title-type">main</meta>
+<meta refines="#en_title" property="file-as">Chapter 1</meta>
+<meta refines="#isbn" property="source-of">pagination</meta>
+<meta property="dcterms:modified">2026-04-30T20:28:52Z</meta>
+<meta name="cover" content="cover-image"/>
 <meta property="schema:accessMode">textual</meta>
 <meta property="schema:accessMode">visual</meta>
-<meta property="schema:accessModeSufficient">textual</meta>
 <meta property="schema:accessModeSufficient">textual,visual</meta>
+<meta property="schema:accessModeSufficient">textual</meta>
 <meta property="schema:accessibilityFeature">alternativeText</meta>
 <meta property="schema:accessibilityFeature">structuralNavigation</meta>
 <meta property="schema:accessibilityFeature">pageBreakMarkers</meta>
 <meta property="schema:accessibilityFeature">pageNavigation</meta>
-<meta property="schema:accessibilityFeature">displayTransformability</meta>
 <meta property="schema:accessibilityFeature">ARIA</meta>
 <meta property="schema:accessibilityFeature">readingOrder</meta>
-<meta property="schema:accessibilityFeature">index</meta>
+<meta property="schema:accessibilityFeature">displayTransformability</meta>
 <meta property="schema:accessibilityFeature">tableOfContents</meta>
 <meta property="schema:accessibilityHazard">none</meta>
-<meta property="dcterms:modified">2026-04-16T22:00:00Z</meta>
-<dc:date>2026-04-16T22:00:00Z</dc:date>
-<dc:title id="t1">Tissues</dc:title>
-<meta refines="#t1" property="title-type">main</meta>
-<meta refines="#t1" property="display-seq">1</meta>
-<dc:title id="t2">Edition</dc:title>
-<meta refines="#t2" property="title-type">edition</meta>
-<meta refines="#t2" property="display-seq">2</meta>
-<dc:creator id="creator1">Creater</dc:creator>
-<meta refines="#creator1" property="role" scheme="marc:relators" id="role1">Creater</meta>
-<meta refines="#creator1" property="file-as">Creater</meta>
-<meta refines="#creator1" property="display-seq">1</meta>
-<dc:language>en</dc:language>
-<meta property="dcterms:publisher">publisher</meta>
-<dc:identifier id="pub-id">Sample_Pages_epub301</dc:identifier>
-<meta refines="#pub-id" property="identifier-type" scheme="xsd:string">uuid</meta>
-<dc:identifier id="isbn-id">urn:isbn:</dc:identifier>
-<meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">1</meta>
-<dc:source id="src-id">urn:isbn:</dc:source>
-<meta refines="#src-id" property="identifier-type" scheme="onix:codelist5">1</meta>
-<meta refines="#src-id" property="source-of">pagination</meta>
-<meta property="ibooks:specified-fonts">false</meta>
-<meta name="cover" content="cover-image"/>
+<meta property="schema:accessibilitySummary">This title is a well-marked up and structured book, which is fully accessible. This book contains images, table of content, page-list, landmark, reading order, Structural Navigation, Unit Opener, Unit 2 Glossary of Terms, Unit 2 Credits, and semantic structure, short alt texts are provided. This ebook passes Daisy’s Ace WCAG 2.2 Level AA checks. Additionally, blank pages have been removed from the ebook, while their page break labels have been left in for reasons of structural flow.</meta>
+<link href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa" rel="dcterms:conformsTo"/>
+<meta refines="#id" property="role" scheme="marc:relators">aut</meta>
+<meta refines="#id" property="file-as">Associates, Curriculum</meta>
 </metadata>
 <manifest>
-<item href="styles/stylesheet.css" id="style_nav" media-type="text/css"/>
-<item id="cover" href="xhtml/Cover.xhtml" media-type="application/xhtml+xml"/>    
-<item id="c1" href="xhtml/contents.xhtml" media-type="application/xhtml+xml"/>
-<item id="c2" href="xhtml/overview.xhtml" media-type="application/xhtml+xml"/>
-<item id="c3" href="xhtml/chap1.xhtml" media-type="application/xhtml+xml"/>
-<item id="c4" href="xhtml/chap2.xhtml" media-type="application/xhtml+xml"/>
-<item id="c5" href="xhtml/chap3.xhtml" media-type="application/xhtml+xml"/>
-<item id="img1" href="images/cover.jpg" properties="cover-image" media-type="image/jpeg"/>
-<item id="img2" href="images/img1.jpeg" media-type="image/jpeg"/>
-<item id="img3" href="images/img2.jpg" media-type="image/jpeg"/>
-<item id="img4" href="images/img3.jpg" media-type="image/jpeg"/>
-<item id="img5" href="images/img4.jpg" media-type="image/jpeg"/>
-<item id="img6" href="images/img5.jpg" media-type="image/jpeg"/>
-<item id="img7" href="images/img6.jpg" media-type="image/jpeg"/>
-<item id="img8" href="images/img7.jpg" media-type="image/jpeg"/>
-<item id="img9" href="images/img8.jpg" media-type="image/jpeg"/>
-<item id="img10" href="images/img9.jpg" media-type="image/jpeg"/>
-<item id="img11" href="images/img10.jpg" media-type="image/jpeg"/>
-<item id="img12" href="images/img11.jpg" media-type="image/jpeg"/>
-<item id="img13" href="images/img12.jpg" media-type="image/jpeg"/>
-<item id="img14" href="images/img13.jpg" media-type="image/jpeg"/>
-<item id="img15" href="images/img14.jpg" media-type="image/jpeg"/>
-<item id="img16" href="images/img15.jpg" media-type="image/jpeg"/>
-<item id="img17" href="images/img16.jpg" media-type="image/jpeg"/>
-<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
 <item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+<item id="aastylesheet" href="style/template.css" media-type="text/css"/>
+<item id="Cover" href="xhtml/Cover.xhtml" media-type="application/xhtml+xml"/>
+<item id="chap1_S01" href="xhtml/chap1_S01.xhtml" media-type="application/xhtml+xml"/>
+<item id="chap1_S02" href="xhtml/chap1_S02.xhtml" media-type="application/xhtml+xml"/>
+<item id="chap1_S03" href="xhtml/chap1_S03.xhtml" media-type="application/xhtml+xml"/>
+<item id="chap1_S04" href="xhtml/chap1_S04.xhtml" media-type="application/xhtml+xml"/>
+<item id="overview" href="xhtml/Overview.xhtml" media-type="application/xhtml+xml"/>
+<item id="summary" href="xhtml/summary.xhtml" media-type="application/xhtml+xml"/>
+<item id="review" href="xhtml/Review.xhtml" media-type="application/xhtml+xml"/>
+<item id="discussion" href="xhtml/discussion.xhtml" media-type="application/xhtml+xml"/>
+<item id="toc" href="xhtml/toc.xhtml" media-type="application/xhtml+xml"/>
+<item id="Title" href="xhtml/title.xhtml" media-type="application/xhtml+xml"/>
+<item id="img1" href="images/image1.jpg" media-type="image/jpeg"/>
+<item id="img2" href="images/image2.jpg" media-type="image/jpeg"/>
+<item id="img3" href="images/image3.jpg" media-type="image/jpeg"/>
+<item id="img4" href="images/p4-2.jpg" media-type="image/jpeg"/>
+<item id="img5" href="images/p5-1.jpg" media-type="image/jpeg"/>
+<item id="img6" href="images/p5-2.jpg" media-type="image/jpeg"/>
+<item id="img7" href="images/p5-3.jpg" media-type="image/jpeg"/>
+<item id="img8" href="images/p5-4.jpg" media-type="image/jpeg"/>
+<item id="img9" href="images/p6-1.jpg" media-type="image/jpeg"/>
+<item id="img10" href="images/p7-1.jpg" media-type="image/jpeg"/>
+<item id="img11" href="images/p8-1.jpg" media-type="image/jpeg"/>
+<item id="img12" href="images/p9-1.jpg" media-type="image/jpeg"/>
+<item id="cover-image" href="images/Coverimage.jpg" media-type="image/jpeg" properties="cover-image"/>
 </manifest>
 <spine toc="ncx">
-<itemref idref="nav"/>
-<itemref idref="cover"/>
-<itemref idref="c1"/>
-<itemref idref="c2"/>
-<itemref idref="c3"/>
-<itemref idref="c4"/>
-<itemref idref="c5"/>
+<itemref idref="Cover" linear="yes"/>
+<itemref idref="Title"/>
+<itemref idref="toc"/>
+<itemref idref="overview"/>
+<itemref idref="chap1_S01"/>
+<itemref idref="chap1_S02"/>
+<itemref idref="chap1_S03"/>
+<itemref idref="chap1_S04"/>
+<itemref idref="summary"/>
+<itemref idref="review"/>
+<itemref idref="discussion"/>
 </spine>
 <guide>
-<reference type="cover" title="Cover" href="xhtml/Cover.xhtml"/>
-<reference type="toc" title="Contents" href="nav.xhtml"/>
-<reference type="text" title="Tissues" href="xhtml/chap1.xhtml"/>
+<reference type="cover" title="Cover Image" href="xhtml/Cover.xhtml"/>
+<reference type="text" title="Chapter 1" href="xhtml/chap1_S01.xhtml"/>
 </guide>
 </package>

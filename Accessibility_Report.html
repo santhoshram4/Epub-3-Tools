@@ -2,6 +2,7 @@
         <!DOCTYPE html>
         <html>
         <head>
+            <meta charset="utf-8">
             <title>EPUB Accessibility Report</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 40px; background-color: #f4f7f6; }
@@ -18,6 +19,7 @@
                 .error-type { font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; display: inline-block; text-align: center; width: 70px; }
                 .error { color: #c0392b; background: #f9ebea; }
                 .warning { color: #d35400; background: #fef5e7; }
+                .success-row { background-color: #e8f8f5; color: #117a65; font-weight: bold; font-size: 0.95em; padding: 15px; border-radius: 4px; border-left: 5px solid #1abc9c; margin-top: 10px; }
                 .msg { color: #34495e; line-height: 1.5; white-space: normal; word-break: normal; }
                 .msg b { color: #2c3e50; background-color: #eaecef; padding: 2px 4px; border-radius: 4px; font-family: Consolas, monospace; }
             </style>
@@ -25,214 +27,49 @@
         <body>
             <div class="container">
                 <h1>Accessibility Audit Report</h1>
-                <div class="summary">Generated: 2026-05-23 11:46:06 | OEBPS: C:\QC tool test\OEBPS</div>
+                <div class="summary">Generated: 2026-05-23 15:02:10 | OEBPS: C:\QC tool test\OEBPS</div>
         
             <div class="file-card">
                 <span class="filename">📄 Cover.xhtml</span>
-                <table>
-                    <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>
-                    <tr>
-                        <td class="line-no">Line 10</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">First <b>&lt;section&gt;</b> under body is missing required attributes: <b>&#x27;role&#x27;</b>, <b>&#x27;aria-labelledby&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 11</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">The <b>&lt;figure&gt;</b> tag must contain a <b>&lt;p&gt;</b> tag directly before the <b>&lt;img&gt;</b> tag.</td>
-                    </tr></table></div>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
             <div class="file-card">
-                <span class="filename">📄 chap1.xhtml</span>
-                <table>
-                    <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>
-                    <tr>
-                        <td class="line-no">Line 10</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h1&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr></table></div>
+                <span class="filename">📄 Overview.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
             <div class="file-card">
-                <span class="filename">📄 chap2.xhtml</span>
-                <table>
-                    <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>
-                    <tr>
-                        <td class="line-no">Line 9</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h1&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 14</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 14</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 19</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 19</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 22</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 22</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 26</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 26</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 31</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 31</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr></table></div>
+                <span class="filename">📄 Review.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
             <div class="file-card">
-                <span class="filename">📄 chap3.xhtml</span>
-                <table>
-                    <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>
-                    <tr>
-                        <td class="line-no">Line 9</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h1&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 20</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 20</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 22</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 22</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 36</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 36</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 40</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 40</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 56</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 56</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h2&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 61</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 61</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 81</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 81</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 110</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 110</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 124</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 124</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 139</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;id&#x27;</b>.</td>
-                    </tr>
-                    <tr>
-                        <td class="line-no">Line 139</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h3&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr></table></div>
+                <span class="filename">📄 chap1_S01.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
             <div class="file-card">
-                <span class="filename">📄 contents.xhtml</span>
-                <table>
-                    <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>
-                    <tr>
-                        <td class="line-no">Line 10</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h1&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr></table></div>
+                <span class="filename">📄 chap1_S02.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
             <div class="file-card">
-                <span class="filename">📄 overview.xhtml</span>
-                <table>
-                    <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>
-                    <tr>
-                        <td class="line-no">Line 10</td>
-                        <td class="type-col"><span class="error-type error">Error</span></td>
-                        <td class="msg">Heading <b>&lt;h1&gt;</b> missing an <b>&#x27;epub:type&#x27;</b> attribute.</td>
-                    </tr></table></div></div></body></html>
+                <span class="filename">📄 chap1_S03.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
+            <div class="file-card">
+                <span class="filename">📄 chap1_S04.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
+            <div class="file-card">
+                <span class="filename">📄 discussion.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
+            <div class="file-card">
+                <span class="filename">📄 summary.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
+            <div class="file-card">
+                <span class="filename">📄 title.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>
+            <div class="file-card">
+                <span class="filename">📄 toc.xhtml</span>
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div></div></body></html>

@@ -2,7 +2,7 @@ import os
 import glob
 import datetime
 import html
-import re  # Fixed regex to perfectly handle escaped HTML entities and quotes
+import re
 from bs4 import BeautifulSoup
 
 class EpubAccessibilityReporter:
@@ -35,11 +35,8 @@ class EpubAccessibilityReporter:
                         alt_val = img.get('alt')
                         role_val = img.get('role')
 
-                        # Condition 1: Alt attribute-ae illai (Strict Error)
                         if alt_val is None:
                             file_errors.append({"type": "Error", "line": line_no, "msg": "Missing 'alt' attribute."})
-                        
-                        # Condition 2: Alt empty-ah irukku, aana role="presentation" illai (Warning)
                         elif alt_val.strip() == "":
                             if role_val != "presentation":
                                 file_errors.append({"type": "Warning", "line": line_no, "msg": "Empty alt found. Add role='presentation' for decorative images."})
@@ -48,12 +45,8 @@ class EpubAccessibilityReporter:
                     headings = soup.find_all(['h1', 'h2', 'h3'])
                     for h in headings:
                         line_no = h.sourceline
-                        
-                        # ID attribute check
                         if not h.get('id'):
                             file_errors.append({"type": "Error", "line": line_no, "msg": f"Heading <{h.name}> missing an 'id'."})
-                        
-                        # epub:type attribute check
                         if not h.get('epub:type'):
                             file_errors.append({"type": "Error", "line": line_no, "msg": f"Heading <{h.name}> missing an 'epub:type' attribute."})
 
@@ -63,18 +56,14 @@ class EpubAccessibilityReporter:
                         first_section = body_tag.find('section')
                         if first_section:
                             line_no = first_section.sourceline
-                            
                             has_role = first_section.get('role')
                             has_epub_type = first_section.get('epub:type')
                             has_aria_label = first_section.get('aria-labelledby')
                             
                             missing_attrs = []
-                            if not has_role:
-                                missing_attrs.append("'role'")
-                            if not has_epub_type:
-                                missing_attrs.append("'epub:type'")
-                            if not has_aria_label:
-                                missing_attrs.append("'aria-labelledby'")
+                            if not has_role: missing_attrs.append("'role'")
+                            if not has_epub_type: missing_attrs.append("'epub:type'")
+                            if not has_aria_label: missing_attrs.append("'aria-labelledby'")
                                 
                             if missing_attrs:
                                 attrs_str = ", ".join(missing_attrs)
@@ -100,28 +89,16 @@ class EpubAccessibilityReporter:
                     for th in ths:
                         line_no = th.sourceline
                         if not th.get('scope'):
-                            file_errors.append({
-                                "type": "Error",
-                                "line": line_no,
-                                "msg": "Table header <th> is missing a 'scope' attribute."
-                            })
+                            file_errors.append({"type": "Error", "line": line_no, "msg": "Table header <th> is missing a 'scope' attribute."})
                         if not th.find('p'):
-                            file_errors.append({
-                                "type": "Error",
-                                "line": line_no,
-                                "msg": "Table header <th> must contain a <p> tag."
-                            })
+                            file_errors.append({"type": "Error", "line": line_no, "msg": "Table header <th> must contain a <p> tag."})
 
                     # 6. Table Data<td> Validation
                     tds = soup.find_all('td')
                     for td in tds:
                         line_no = td.sourceline
                         if not td.find('p'):
-                            file_errors.append({
-                                "type": "Error",
-                                "line": line_no,
-                                "msg": "Table cell <td> must contain a <p> tag."
-                            })
+                            file_errors.append({"type": "Error", "line": line_no, "msg": "Table cell <td> must contain a <p> tag."})
 
                     # 7. List Validation (<ul> and <ol>)
                     lists = soup.find_all(['ul', 'ol'])
@@ -139,7 +116,6 @@ class EpubAccessibilityReporter:
                     for fig in figures:
                         line_no = fig.sourceline
                         first_child = fig.find(True) 
-                        
                         if not first_child or first_child.name != 'p':
                             file_errors.append({
                                 "type": "Error",
@@ -150,24 +126,29 @@ class EpubAccessibilityReporter:
             except Exception as e:
                 file_errors.append({"type": "Error", "line": "N/A", "msg": f"File read error: {str(e)}"})
 
+            # Edhavathu error irundhal sort seiyum, illai endral empty list-agave irukkum
             if file_errors:
                 file_errors.sort(key=lambda x: x['line'] if isinstance(x['line'], int) else 0)
-                report_data.append({"filename": filename, "errors": file_errors})
+            
+            # Appending all files (even if they have 0 errors) to track execution
+            report_data.append({"filename": filename, "errors": file_errors})
         
         return report_data
 
     def generate_html_report(self):
         if not self.xhtml_files:
-            print(f"!!! Error: XHTML files kidaikala in {self.xhtml_dir}")
+            print(f"\n[ERROR] XHTML files kidaikala in: {self.xhtml_dir}")
             return
 
+        print(f"\n>>> Scanning XHTML files in {self.xhtml_dir}...")
         data = self.scan_for_errors()
         now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
+
         html_content = f'''
         <!DOCTYPE html>
         <html>
         <head>
+            <meta charset="utf-8">
             <title>EPUB Accessibility Report</title>
             <style>
                 body {{ font-family: 'Segoe UI', Tahoma, sans-serif; margin: 40px; background-color: #f4f7f6; }}
@@ -184,6 +165,7 @@ class EpubAccessibilityReporter:
                 .error-type {{ font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; display: inline-block; text-align: center; width: 70px; }}
                 .error {{ color: #c0392b; background: #f9ebea; }}
                 .warning {{ color: #d35400; background: #fef5e7; }}
+                .success-row {{ background-color: #e8f8f5; color: #117a65; font-weight: bold; font-size: 0.95em; padding: 15px; border-radius: 4px; border-left: 5px solid #1abc9c; margin-top: 10px; }}
                 .msg {{ color: #34495e; line-height: 1.5; white-space: normal; word-break: normal; }}
                 .msg b {{ color: #2c3e50; background-color: #eaecef; padding: 2px 4px; border-radius: 4px; font-family: Consolas, monospace; }}
             </style>
@@ -194,38 +176,63 @@ class EpubAccessibilityReporter:
                 <div class="summary">Generated: {now} | OEBPS: {self.oebps_path}</div>
         '''
 
+        total_files_scanned = len(data)
+        total_errors_count = 0
+        issue_files_count = 0
+
         for item in data:
             html_content += f'''
             <div class="file-card">
-                <span class="filename">📄 {item["filename"]}</span>
+                <span class="filename">📄 {item["filename"]}</span>'''
+            
+            # Condition: File-la error ethuvumae illaiyendraal
+            if not item['errors']:
+                html_content += f'''
+                <div class="success-row">🎉 No issues found! Perfect file.</div>
+                </div>'''
+            else:
+                # File-la error irundhal table create aagum
+                issue_files_count += 1
+                total_errors_count += len(item['errors'])
+                html_content += f'''
                 <table>
                     <tr><th style="width: 15%;">Line</th><th style="width: 15%;">Type</th><th style="width: 70%;">Issue Description</th></tr>'''
-            for err in item['errors']:
-                type_class = err['type'].lower()
-                safe_msg = html.escape(err['msg'])
-                
-                # FIXED REGEX SOLUTION:
-                # 1. (&#x27;|&#39;|').*?(&#x27;|&#39;|') -> Handles standard single quotes and all html-escaped variations perfectly.
-                # 2. &lt;.*?&gt; -> Handles html-escaped tags like &lt;colgroup&gt; or &lt;p&gt;.
-                # 3. <.*?> -> Handles any raw tag elements.
-                bolded_msg = re.sub(r"((?:&#x27;|&#39;|').*?(?:&#x27;|&#39;|')|&lt;.*?&gt;|<.*?>)", lambda m: f"<b>{m.group(0)}</b>", safe_msg)
-                
-                html_content += f'''
-                    <tr>
-                        <td class="line-no">Line {err['line']}</td>
-                        <td class="type-col"><span class="error-type {type_class}">{err['type']}</span></td>
-                        <td class="msg">{bolded_msg}</td>
-                    </tr>'''
-            html_content += "</table></div>"
+                for err in item['errors']:
+                    type_class = err['type'].lower()
+                    safe_msg = html.escape(err['msg'])
+                    
+                    bolded_msg = re.sub(r"((?:&#x27;|&#39;|').*?(?:&#x27;|&#39;|')|&lt;.*?&gt;|<.*?>)", lambda m: f"<b>{m.group(0)}</b>", safe_msg)
+                    
+                    html_content += f'''
+                        <tr>
+                            <td class="line-no">Line {err['line']}</td>
+                            <td class="type-col"><span class="error-type {type_class}">{err['type']}</span></td>
+                            <td class="msg">{bolded_msg}</td>
+                        </tr>'''
+                html_content += "</table></div>"
 
         html_content += "</div></body></html>"
 
         try:
             with open(self.report_file, "w", encoding="utf-8") as f:
                 f.write(html_content)
-            print(f"SUCCESS! Report created at: {self.report_file}")
+            
+            # --- CMD SUMMARY DASHBOARD ---
+            print("\n" + "="*50)
+            print(" 🎉 PROCESS COMPLETED SUCCESSFULLY! 🎉")
+            print("="*50)
+            print(f" 📅 Timestamp       : {now}")
+            print(f" 📁 Total Scanned    : {total_files_scanned} file(s)")
+            print(f" 🗂️ Files with Issue : {issue_files_count} file(s)")
+            print(f" ⚠️ Total Issues Found: {total_errors_count}")
+            print(f" 📄 Report Saved At  : {self.report_file}")
+            print("="*50)
+            
+            input("Press Enter to exit...")
+            
         except Exception as e:
-            print(f"!!! Error: {e}")
+            print(f"\n[ERROR] Report write panna mudiyala: {e}")
+            input("Press Enter to exit...")
 
 if __name__ == "__main__":
     OEBPS_FOLDER = r"C:\QC tool test\OEBPS"
@@ -233,4 +240,5 @@ if __name__ == "__main__":
         reporter = EpubAccessibilityReporter(OEBPS_FOLDER)
         reporter.generate_html_report()
     else:
-        print("Path not found!")
+        print(f"\n[ERROR] Path not found: {OEBPS_FOLDER}")
+        input("Press Enter to exit...")

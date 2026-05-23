@@ -1,73 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" xmlns:ncx="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
 <head>
-<meta content="Sample_Pages_epub301" name="dtb:uid"/>
-<meta content="1" name="dtb:depth"/>
-<meta content="12" name="dtb:totalPageCount"/>
-<meta content="12" name="dtb:maxPageNumber"/>
+<meta name="dtb:uid" content="urn:isbn:"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="10"/>
+<meta name="dtb:maxPageNumber" content="10"/>
 </head>
-<docTitle>
-<text>Tissues</text>
-</docTitle>
+<docTitle><text>Magnetic Literacy: Storytellers: Grade 4 / Unit 2</text></docTitle>
+<docAuthor><text>Curriculum Associates</text></docAuthor>
 <navMap>
-<navPoint id="nav1" playOrder="1"><navLabel><text>Cover</text></navLabel><content src="xhtml/Cover.xhtml" /></navPoint>
-<navPoint id="nav2" playOrder="2"><navLabel><text>Tissues</text></navLabel><content src="xhtml/chap1.xhtml" /></navPoint>
-<navPoint id="nav3" playOrder="3"><navLabel><text>Tissues</text></navLabel><content src="xhtml/chap2.xhtml" /></navPoint>
-<navPoint id="nav4" playOrder="4"><navLabel><text>Tissues</text></navLabel><content src="xhtml/chap3.xhtml" /></navPoint>
-<navPoint id="nav5" playOrder="5"><navLabel><text>Tissues</text></navLabel><content src="xhtml/contents.xhtml" /></navPoint>
-<navPoint id="nav6" playOrder="6"><navLabel><text>Tissues</text></navLabel><content src="xhtml/overview.xhtml" /></navPoint>
+<navPoint id="M1" playOrder="1"><navLabel><text>Unit 2</text></navLabel><content src="xhtml/Cover.xhtml"/></navPoint>
+<navPoint id="M2" playOrder="2"><navLabel><text>Cover</text></navLabel><content src="xhtml/Cover.xhtml#cov"/></navPoint>
+<navPoint id="M3" playOrder="3"><navLabel><text>Table of Contents</text></navLabel><content src="xhtml/toc.xhtml"/></navPoint>
+<navPoint id="M4" playOrder="4"><navLabel><text>Overview</text></navLabel><content src="xhtml/Overview.xhtml"/></navPoint>
+<navPoint id="M5" playOrder="5"><navLabel><text>Session 1</text></navLabel><content src="xhtml/chap1_S01.xhtml"/></navPoint>
+<navPoint id="M6" playOrder="6"><navLabel><text>Session 2</text></navLabel><content src="xhtml/chap1_S02.xhtml"/></navPoint>
+<navPoint id="M7" playOrder="7"><navLabel><text>Session 3</text></navLabel><content src="xhtml/chap1_S03.xhtml"/></navPoint>
+<navPoint id="M8" playOrder="8"><navLabel><text>Session 4</text></navLabel><content src="xhtml/chap1_S04.xhtml"/></navPoint>
+<navPoint id="M9" playOrder="9"><navLabel><text>Summary</text></navLabel><content src="xhtml/summary.xhtml"/></navPoint>
+<navPoint id="M10" playOrder="10"><navLabel><text>Review</text></navLabel><content src="xhtml/Review.xhtml"/></navPoint>
+<navPoint id="M11" playOrder="11"><navLabel><text>Discussion</text></navLabel><content src="xhtml/discussion.xhtml"/></navPoint>
 </navMap>
 <pageList>
-<navInfo>
-<text>Pages</text>
-</navInfo>
-<pageTarget type="normal" playOrder="7">
-<navLabel><text>Page 51</text></navLabel>
-<content src="xhtml/overview.xhtml#page_51"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="8">
-<navLabel><text>Page 52</text></navLabel>
-<content src="xhtml/chap1.xhtml#page_52"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="9">
-<navLabel><text>Page 53</text></navLabel>
-<content src="xhtml/chap2.xhtml#page_53"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="10">
-<navLabel><text>Page 54</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_54"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="11">
-<navLabel><text>Page 55</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_55"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="12">
-<navLabel><text>Page 56</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_56"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="13">
-<navLabel><text>Page 57</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_57"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="14">
-<navLabel><text>Page 58</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_58"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="15">
-<navLabel><text>Page 59</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_59"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="16">
-<navLabel><text>Page 60</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_60"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="17">
-<navLabel><text>Page 61</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_61"/>
-</pageTarget>
-<pageTarget type="normal" playOrder="18">
-<navLabel><text>Page 62</text></navLabel>
-<content src="xhtml/chap3.xhtml#page_62"/>
-</pageTarget>
+<pageTarget id="M12" type="normal" playOrder="12" value="2"><navLabel><text>2</text></navLabel><content src="xhtml/chap1_S01.xhtml#page_2"/></pageTarget>
+<pageTarget id="M13" type="normal" playOrder="13" value="3"><navLabel><text>3</text></navLabel><content src="xhtml/chap1_S01.xhtml#page_3"/></pageTarget>
+<pageTarget id="M14" type="normal" playOrder="14" value="4"><navLabel><text>4</text></navLabel><content src="xhtml/chap1_S02.xhtml#page_4"/></pageTarget>
+<pageTarget id="M15" type="normal" playOrder="15" value="5"><navLabel><text>5</text></navLabel><content src="xhtml/chap1_S02.xhtml#page_5"/></pageTarget>
+<pageTarget id="M16" type="normal" playOrder="16" value="6"><navLabel><text>6</text></navLabel><content src="xhtml/chap1_S02.xhtml#page_6"/></pageTarget>
+<pageTarget id="M17" type="normal" playOrder="17" value="7"><navLabel><text>7</text></navLabel><content src="xhtml/chap1_S04.xhtml#page_7"/></pageTarget>
+<pageTarget id="M18" type="normal" playOrder="18" value="8"><navLabel><text>8</text></navLabel><content src="xhtml/chap1_S04.xhtml#page_8"/></pageTarget>
+<pageTarget id="M19" type="normal" playOrder="19" value="9"><navLabel><text>9</text></navLabel><content src="xhtml/chap1_S04.xhtml#page_9"/></pageTarget>
+<pageTarget id="M20" type="normal" playOrder="20" value="10"><navLabel><text>9</text></navLabel><content src="xhtml/summary.xhtml#page_10"/></pageTarget>
 </pageList>
 </ncx>
