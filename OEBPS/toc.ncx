@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+<head>
+<meta content="Sample_Pages_epub301" name="dtb:uid"/>
+<meta content="1" name="dtb:depth"/>
+<meta content="12" name="dtb:totalPageCount"/>
+<meta content="12" name="dtb:maxPageNumber"/>
+</head>
+<docTitle>
+<text>Tissues</text>
+</docTitle>
+<navMap>
+<navPoint id="nav1" playOrder="1"><navLabel><text>Cover</text></navLabel><content src="xhtml/Cover.xhtml" /></navPoint>
+<navPoint id="nav2" playOrder="2"><navLabel><text>Tissues</text></navLabel><content src="xhtml/chap1.xhtml" /></navPoint>
+<navPoint id="nav3" playOrder="3"><navLabel><text>Tissues</text></navLabel><content src="xhtml/chap2.xhtml" /></navPoint>
+<navPoint id="nav4" playOrder="4"><navLabel><text>Tissues</text></navLabel><content src="xhtml/chap3.xhtml" /></navPoint>
+<navPoint id="nav5" playOrder="5"><navLabel><text>Tissues</text></navLabel><content src="xhtml/contents.xhtml" /></navPoint>
+<navPoint id="nav6" playOrder="6"><navLabel><text>Tissues</text></navLabel><content src="xhtml/overview.xhtml" /></navPoint>
+</navMap>
+<pageList>
+<navInfo>
+<text>Pages</text>
+</navInfo>
+<pageTarget type="normal" playOrder="7">
+<navLabel><text>Page 51</text></navLabel>
+<content src="xhtml/overview.xhtml#page_51"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="8">
+<navLabel><text>Page 52</text></navLabel>
+<content src="xhtml/chap1.xhtml#page_52"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="9">
+<navLabel><text>Page 53</text></navLabel>
+<content src="xhtml/chap2.xhtml#page_53"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="10">
+<navLabel><text>Page 54</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_54"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="11">
+<navLabel><text>Page 55</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_55"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="12">
+<navLabel><text>Page 56</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_56"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="13">
+<navLabel><text>Page 57</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_57"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="14">
+<navLabel><text>Page 58</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_58"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="15">
+<navLabel><text>Page 59</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_59"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="16">
+<navLabel><text>Page 60</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_60"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="17">
+<navLabel><text>Page 61</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_61"/>
+</pageTarget>
+<pageTarget type="normal" playOrder="18">
+<navLabel><text>Page 62</text></navLabel>
+<content src="xhtml/chap3.xhtml#page_62"/>
+</pageTarget>
+</pageList>
+</ncx>
