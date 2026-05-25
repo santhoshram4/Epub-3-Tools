@@ -3,33 +3,109 @@
 <head>
 <meta name="dtb:uid" content="urn:isbn:"/>
 <meta name="dtb:depth" content="1"/>
-<meta name="dtb:totalPageCount" content="10"/>
-<meta name="dtb:maxPageNumber" content="10"/>
+<meta name="dtb:totalPageCount" content="12"/>
+<meta name="dtb:maxPageNumber" content="12"/>
 </head>
-<docTitle><text>Magnetic Literacy: Storytellers: Grade 4 / Unit 2</text></docTitle>
+<docTitle><text>Cryptids: Fact or Fiction?: Unit 5</text></docTitle>
 <docAuthor><text>Curriculum Associates</text></docAuthor>
 <navMap>
-<navPoint id="M1" playOrder="1"><navLabel><text>Unit 2</text></navLabel><content src="xhtml/Cover.xhtml"/></navPoint>
-<navPoint id="M2" playOrder="2"><navLabel><text>Cover</text></navLabel><content src="xhtml/Cover.xhtml#cov"/></navPoint>
-<navPoint id="M3" playOrder="3"><navLabel><text>Table of Contents</text></navLabel><content src="xhtml/toc.xhtml"/></navPoint>
-<navPoint id="M4" playOrder="4"><navLabel><text>Overview</text></navLabel><content src="xhtml/Overview.xhtml"/></navPoint>
-<navPoint id="M5" playOrder="5"><navLabel><text>Session 1</text></navLabel><content src="xhtml/chap1_S01.xhtml"/></navPoint>
-<navPoint id="M6" playOrder="6"><navLabel><text>Session 2</text></navLabel><content src="xhtml/chap1_S02.xhtml"/></navPoint>
-<navPoint id="M7" playOrder="7"><navLabel><text>Session 3</text></navLabel><content src="xhtml/chap1_S03.xhtml"/></navPoint>
-<navPoint id="M8" playOrder="8"><navLabel><text>Session 4</text></navLabel><content src="xhtml/chap1_S04.xhtml"/></navPoint>
-<navPoint id="M9" playOrder="9"><navLabel><text>Summary</text></navLabel><content src="xhtml/summary.xhtml"/></navPoint>
-<navPoint id="M10" playOrder="10"><navLabel><text>Review</text></navLabel><content src="xhtml/Review.xhtml"/></navPoint>
-<navPoint id="M11" playOrder="11"><navLabel><text>Discussion</text></navLabel><content src="xhtml/discussion.xhtml"/></navPoint>
+<navPoint id="M1" playOrder="1">
+<navLabel><text>Unit 5</text></navLabel>
+<content src="xhtml/cover.xhtml"/>
+</navPoint>
+<navPoint id="M2" playOrder="2">
+<navLabel><text>Cover</text></navLabel>
+<content src="xhtml/cover.xhtml#cov"/>
+</navPoint>
+<navPoint id="M3" playOrder="3">
+<navLabel><text>Chapter 0</text></navLabel>
+<content src="xhtml/00_Chapter_0.xhtml#Ch0"/>
+</navPoint>
+<navPoint id="M4" playOrder="4">
+<navLabel><text>Chapter 1</text></navLabel>
+<content src="xhtml/01_Chapter_1.xhtml#Ch1"/>
+</navPoint>
+<navPoint id="M5" playOrder="5">
+<navLabel><text>Chapter 2</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#Ch2"/>
+</navPoint>
+<navPoint id="M6" playOrder="6">
+<navLabel><text>Chapter 3</text></navLabel>
+<content src="xhtml/03_Chapter_3.xhtml#Ch3"/>
+</navPoint>
 </navMap>
 <pageList>
-<pageTarget id="M12" type="normal" playOrder="12" value="2"><navLabel><text>2</text></navLabel><content src="xhtml/chap1_S01.xhtml#page_2"/></pageTarget>
-<pageTarget id="M13" type="normal" playOrder="13" value="3"><navLabel><text>3</text></navLabel><content src="xhtml/chap1_S01.xhtml#page_3"/></pageTarget>
-<pageTarget id="M14" type="normal" playOrder="14" value="4"><navLabel><text>4</text></navLabel><content src="xhtml/chap1_S02.xhtml#page_4"/></pageTarget>
-<pageTarget id="M15" type="normal" playOrder="15" value="5"><navLabel><text>5</text></navLabel><content src="xhtml/chap1_S02.xhtml#page_5"/></pageTarget>
-<pageTarget id="M16" type="normal" playOrder="16" value="6"><navLabel><text>6</text></navLabel><content src="xhtml/chap1_S02.xhtml#page_6"/></pageTarget>
-<pageTarget id="M17" type="normal" playOrder="17" value="7"><navLabel><text>7</text></navLabel><content src="xhtml/chap1_S04.xhtml#page_7"/></pageTarget>
-<pageTarget id="M18" type="normal" playOrder="18" value="8"><navLabel><text>8</text></navLabel><content src="xhtml/chap1_S04.xhtml#page_8"/></pageTarget>
-<pageTarget id="M19" type="normal" playOrder="19" value="9"><navLabel><text>9</text></navLabel><content src="xhtml/chap1_S04.xhtml#page_9"/></pageTarget>
-<pageTarget id="M20" type="normal" playOrder="20" value="10"><navLabel><text>9</text></navLabel><content src="xhtml/summary.xhtml#page_10"/></pageTarget>
+<pageTarget id="M10" type="normal" playOrder="7" value="2">
+<navLabel><text>244</text></navLabel>
+<content src="xhtml/00_Chapter_0.xhtml#page_244"/>
+</pageTarget>
+<pageTarget id="M11" type="normal" playOrder="8" value="3">
+<navLabel><text>245</text></navLabel>
+<content src="xhtml/01_Chapter_1.xhtml#page_245"/>
+</pageTarget>
+<pageTarget id="M12" type="normal" playOrder="9" value="4">
+<navLabel><text>246</text></navLabel>
+<content src="xhtml/01_Chapter_1.xhtml#page_246"/>
+</pageTarget>
+<pageTarget id="M13" type="normal" playOrder="10" value="5">
+<navLabel><text>247</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_247"/>
+</pageTarget>
+<pageTarget id="M14" type="normal" playOrder="11" value="6">
+<navLabel><text>248</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_248"/>
+</pageTarget>
+<pageTarget id="M15" type="normal" playOrder="12" value="7">
+<navLabel><text>249</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_249"/>
+</pageTarget>
+<pageTarget id="M16" type="normal" playOrder="13" value="8">
+<navLabel><text>250</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_250"/>
+</pageTarget>
+<pageTarget id="M17" type="normal" playOrder="14" value="9">
+<navLabel><text>251</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_251"/>
+</pageTarget>
+<pageTarget id="M18" type="normal" playOrder="15" value="10">
+<navLabel><text>252</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_252"/>
+</pageTarget>
+<pageTarget id="M19" type="normal" playOrder="16" value="11">
+<navLabel><text>253</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_253"/>
+</pageTarget>
+<pageTarget id="M20" type="normal" playOrder="17" value="12">
+<navLabel><text>254</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_254"/>
+</pageTarget>
+<pageTarget id="M21" type="normal" playOrder="18" value="13">
+<navLabel><text>255</text></navLabel>
+<content src="xhtml/02_Chapter_2.xhtml#page_255"/>
+</pageTarget>
+<pageTarget id="M22" type="normal" playOrder="19" value="14">
+<navLabel><text>256</text></navLabel>
+<content src="xhtml/03_Chapter_3.xhtml#page_256"/>
+</pageTarget>
+<pageTarget id="M23" type="normal" playOrder="20" value="15">
+<navLabel><text>257</text></navLabel>
+<content src="xhtml/03_Chapter_3.xhtml#page_257"/>
+</pageTarget>
+<pageTarget id="M24" type="normal" playOrder="21" value="16">
+<navLabel><text>258</text></navLabel>
+<content src="xhtml/03_Chapter_3.xhtml#page_258"/>
+</pageTarget>
+<pageTarget id="M25" type="normal" playOrder="22" value="17">
+<navLabel><text>259</text></navLabel>
+<content src="xhtml/03_Chapter_3.xhtml#page_259"/>
+</pageTarget>
+<pageTarget id="M26" type="normal" playOrder="23" value="18">
+<navLabel><text>260</text></navLabel>
+<content src="xhtml/03_Chapter_3.xhtml#page_260"/>
+</pageTarget>
+<pageTarget id="M27" type="normal" playOrder="24" value="19">
+<navLabel><text>261</text></navLabel>
+<content src="xhtml/03_Chapter_3.xhtml#page_261"/>
+</pageTarget>
 </pageList>
 </ncx>

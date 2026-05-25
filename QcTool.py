@@ -3,14 +3,27 @@ import glob
 import datetime
 import html
 import re
-from bs4 import BeautifulSoup
+import sys
+
+# Checking for required libraries and guiding the user if missing
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    print("\n" + "!"*60)
+    print(" [ERROR] 'beautifulsoup4' library is NOT installed in this system!")
+    print(" Please run the following command in CMD to install it:")
+    print(" >>> pip install beautifulsoup4 lxml")
+    print("!"*60 + "\n")
+    input("Press Enter to exit...")
+    sys.exit(1)
 
 class EpubAccessibilityReporter:
     def __init__(self, oebps_path):
         self.oebps_path = os.path.abspath(oebps_path)
         self.xhtml_dir = os.path.join(self.oebps_path, "xhtml")
         
-        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # 🌟 FIXED FOR EXE: Using os.getcwd() instead of __file__ to avoid Temp folder issue
+        current_dir = os.getcwd()
         self.report_file = os.path.join(current_dir, "Accessibility_Report.html")
         
         if os.path.exists(self.xhtml_dir):
@@ -126,11 +139,9 @@ class EpubAccessibilityReporter:
             except Exception as e:
                 file_errors.append({"type": "Error", "line": "N/A", "msg": f"File read error: {str(e)}"})
 
-            # Edhavathu error irundhal sort seiyum, illai endral empty list-agave irukkum
             if file_errors:
                 file_errors.sort(key=lambda x: x['line'] if isinstance(x['line'], int) else 0)
             
-            # Appending all files (even if they have 0 errors) to track execution
             report_data.append({"filename": filename, "errors": file_errors})
         
         return report_data
@@ -138,6 +149,7 @@ class EpubAccessibilityReporter:
     def generate_html_report(self):
         if not self.xhtml_files:
             print(f"\n[ERROR] XHTML files kidaikala in: {self.xhtml_dir}")
+            input("Press Enter to exit...")
             return
 
         print(f"\n>>> Scanning XHTML files in {self.xhtml_dir}...")
@@ -185,13 +197,11 @@ class EpubAccessibilityReporter:
             <div class="file-card">
                 <span class="filename">📄 {item["filename"]}</span>'''
             
-            # Condition: File-la error ethuvumae illaiyendraal
             if not item['errors']:
                 html_content += f'''
                 <div class="success-row">🎉 No issues found! Perfect file.</div>
                 </div>'''
             else:
-                # File-la error irundhal table create aagum
                 issue_files_count += 1
                 total_errors_count += len(item['errors'])
                 html_content += f'''
@@ -217,7 +227,6 @@ class EpubAccessibilityReporter:
             with open(self.report_file, "w", encoding="utf-8") as f:
                 f.write(html_content)
             
-            # --- CMD SUMMARY DASHBOARD ---
             print("\n" + "="*50)
             print(" 🎉 PROCESS COMPLETED SUCCESSFULLY! 🎉")
             print("="*50)
@@ -235,10 +244,17 @@ class EpubAccessibilityReporter:
             input("Press Enter to exit...")
 
 if __name__ == "__main__":
-    OEBPS_FOLDER = r"C:\QC tool test\OEBPS"
+    # 🌟 EXE friendly dynamic path detection
+    # 'os.getcwd()' will always look at the current folder where the user double-clicks the EXE
+    CURRENT_WORKING_DIR = os.getcwd()
+    OEBPS_FOLDER = os.path.join(CURRENT_WORKING_DIR, "OEBPS")
+    
     if os.path.exists(OEBPS_FOLDER):
         reporter = EpubAccessibilityReporter(OEBPS_FOLDER)
         reporter.generate_html_report()
     else:
-        print(f"\n[ERROR] Path not found: {OEBPS_FOLDER}")
+        print(f"\n[ERROR] 'OEBPS' folder kidaikala!")
+        print(f"Intha tool-ai entha folder-il vaithullirogal, adhae folder kulla 'OEBPS' irukka vendum.")
+        print(f"Expected Path: {OEBPS_FOLDER}")
+        print("="*50)
         input("Press Enter to exit...")

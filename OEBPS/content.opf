@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/ a11y: http://www.idpf.org/epub/vocab/package/a11y/#" xml:lang="en">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
-<dc:title id="en_title" xml:lang="en">Chapter1</dc:title>
+<dc:title id="en_title" xml:lang="en">Cryptids: Fact or Fiction?: Unit 5</dc:title>
 <dc:creator id="id">Curriculum Associates</dc:creator>
 <dc:source id="isbn">urn:isbn:</dc:source>
 <dc:identifier id="bookid">urn:isbn:</dc:identifier>
-<dc:format>10 Pages</dc:format>
+<dc:format>12 Pages</dc:format>
 <dc:type>Text</dc:type>
 <dc:rights>© 2027 Curriculum Associates, LLC</dc:rights>
 <dc:language>en</dc:language>
 <dc:date>2026</dc:date>
 <dc:publisher>Curriculum Associates</dc:publisher>
 <meta refines="#en_title" property="title-type">main</meta>
-<meta refines="#en_title" property="file-as">Chapter 1</meta>
+<meta refines="#en_title" property="file-as">Cryptids: Fact or Fiction?: Unit 5</meta>
 <meta refines="#isbn" property="source-of">pagination</meta>
 <meta property="dcterms:modified">2026-04-30T20:28:52Z</meta>
 <meta name="cover" content="cover-image"/>
@@ -37,47 +37,60 @@
 <manifest>
 <item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
 <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
-<item id="aastylesheet" href="style/template.css" media-type="text/css"/>
-<item id="Cover" href="xhtml/Cover.xhtml" media-type="application/xhtml+xml"/>
-<item id="chap1_S01" href="xhtml/chap1_S01.xhtml" media-type="application/xhtml+xml"/>
-<item id="chap1_S02" href="xhtml/chap1_S02.xhtml" media-type="application/xhtml+xml"/>
-<item id="chap1_S03" href="xhtml/chap1_S03.xhtml" media-type="application/xhtml+xml"/>
-<item id="chap1_S04" href="xhtml/chap1_S04.xhtml" media-type="application/xhtml+xml"/>
-<item id="overview" href="xhtml/Overview.xhtml" media-type="application/xhtml+xml"/>
-<item id="summary" href="xhtml/summary.xhtml" media-type="application/xhtml+xml"/>
-<item id="review" href="xhtml/Review.xhtml" media-type="application/xhtml+xml"/>
-<item id="discussion" href="xhtml/discussion.xhtml" media-type="application/xhtml+xml"/>
-<item id="toc" href="xhtml/toc.xhtml" media-type="application/xhtml+xml"/>
-<item id="Title" href="xhtml/title.xhtml" media-type="application/xhtml+xml"/>
-<item id="img1" href="images/image1.jpg" media-type="image/jpeg"/>
-<item id="img2" href="images/image2.jpg" media-type="image/jpeg"/>
-<item id="img3" href="images/image3.jpg" media-type="image/jpeg"/>
-<item id="img4" href="images/p4-2.jpg" media-type="image/jpeg"/>
-<item id="img5" href="images/p5-1.jpg" media-type="image/jpeg"/>
-<item id="img6" href="images/p5-2.jpg" media-type="image/jpeg"/>
-<item id="img7" href="images/p5-3.jpg" media-type="image/jpeg"/>
-<item id="img8" href="images/p5-4.jpg" media-type="image/jpeg"/>
-<item id="img9" href="images/p6-1.jpg" media-type="image/jpeg"/>
-<item id="img10" href="images/p7-1.jpg" media-type="image/jpeg"/>
-<item id="img11" href="images/p8-1.jpg" media-type="image/jpeg"/>
-<item id="img12" href="images/p9-1.jpg" media-type="image/jpeg"/>
-<item id="cover-image" href="images/Coverimage.jpg" media-type="image/jpeg" properties="cover-image"/>
+<item id="aastylesheet" href="styles/stylesheet.css" media-type="text/css"/>
+<item id="Cover" href="xhtml/cover.xhtml" media-type="application/xhtml+xml"/>
+<item id="toc1" href="xhtml/toc.xhtml" media-type="application/xhtml+xml"/>
+<item id="overview" href="xhtml/overview.xhtml" media-type="application/xhtml+xml"/>
+<item id="Ch0" href="xhtml/00_Chapter_0.xhtml" media-type="application/xhtml+xml"/>
+<item id="Ch1" href="xhtml/01_Chapter_1.xhtml" media-type="application/xhtml+xml"/>
+<item id="Ch2" href="xhtml/02_Chapter_2.xhtml" media-type="application/xhtml+xml"/>
+<item id="Ch3" href="xhtml/03_Chapter_3.xhtml" media-type="application/xhtml+xml"/>
+<item id="img1" href="images/cover-image.png" media-type="image/png"/>
+<item id="img2" href="images/p245-1.png" media-type="image/png"/>
+<item id="img3" href="images/p246-1.png" media-type="image/png"/>
+<item id="img4" href="images/p246-2.png" media-type="image/png"/>
+<item id="img5" href="images/p247-1.png" media-type="image/png"/>
+<item id="img6" href="images/p248-1.png" media-type="image/png"/>
+<item id="img7" href="images/p248-2.png" media-type="image/png"/>
+<item id="img8" href="images/p249-1.png" media-type="image/png"/>
+<item id="img9" href="images/p249-2.png" media-type="image/png"/>
+<item id="img11" href="images/p-250-2.png" media-type="image/png"/>
+<item id="img12" href="images/p251-1.png" media-type="image/png"/>
+<item id="img13" href="images/p251-2.png" media-type="image/png"/>
+<item id="img14" href="images/p252-1.png" media-type="image/png"/>
+<item id="img15" href="images/p252-2.png" media-type="image/png"/>
+<item id="img16" href="images/p253-1.png" media-type="image/png"/>
+<item id="img17" href="images/p253-2.png" media-type="image/png"/>
+<item id="img19" href="images/p254-1.png" media-type="image/png"/>
+<item id="img20" href="images/p255-1.png" media-type="image/png"/>
+<item id="img21" href="images/p256-1.png" media-type="image/png"/>
+<item id="img22" href="images/p257-1.png" media-type="image/png"/>
+<item id="img23" href="images/p257-2.png" media-type="image/png"/>
+<item id="img24" href="images/p257-3.png" media-type="image/png"/>
+<item id="img25" href="images/p258-1.png" media-type="image/png"/>
+<item id="img26" href="images/p258-2.png" media-type="image/png"/>
+<item id="img27" href="images/p259-1.png" media-type="image/png"/>
+<item id="img28" href="images/p259-2.png" media-type="image/png"/>
+<item id="img29" href="images/p260-1.png" media-type="image/png"/>
+<item id="img30" href="images/p260-2.png" media-type="image/png"/>
+<item id="img31" href="images/p260-3.png" media-type="image/png"/>
+<item id="img32" href="images/p260-4.png" media-type="image/png"/>
+<item id="BreeSerif-Regular" href="fonts/Bree_Serif/BreeSerif-Regular.ttf" media-type="font/ttf"/>
+<item id="SourceSans3-Regular" href="fonts/Source_Sans_3/SourceSans3-VariableFont_wght.ttf" media-type="font/ttf"/>
+<item id="Comfortaa-Regular" href="fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf" media-type="font/ttf"/>
 </manifest>
 <spine toc="ncx">
 <itemref idref="Cover" linear="yes"/>
-<itemref idref="Title"/>
-<itemref idref="toc"/>
 <itemref idref="overview"/>
-<itemref idref="chap1_S01"/>
-<itemref idref="chap1_S02"/>
-<itemref idref="chap1_S03"/>
-<itemref idref="chap1_S04"/>
-<itemref idref="summary"/>
-<itemref idref="review"/>
-<itemref idref="discussion"/>
+<itemref idref="toc1"/>
+<itemref idref="Ch0"/>
+<itemref idref="Ch1"/>
+<itemref idref="Ch2"/>
+<itemref idref="Ch3"/>
 </spine>
 <guide>
-<reference type="cover" title="Cover Image" href="xhtml/Cover.xhtml"/>
-<reference type="text" title="Chapter 1" href="xhtml/chap1_S01.xhtml"/>
+<reference type="cover" title="Cover Image" href="xhtml/cover.xhtml"/>
+<reference type="toc" title="Table of Contents" href="xhtml/toc.xhtml"/>
+<reference type="text" title="Chapter 14 Plant Breeding, Propagation, and Biotechnology" href="xhtml/01_Chapter_1.xhtml"/>
 </guide>
 </package>

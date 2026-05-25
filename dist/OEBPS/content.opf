@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/ a11y: http://www.idpf.org/epub/vocab/package/a11y/#" xml:lang="en">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title id="en_title" xml:lang="en">CHAPTER 3 Cells</dc:title>
+<dc:creator id="id">Curriculum Associates</dc:creator>
+<dc:source id="isbn">urn:isbn:</dc:source>
+<dc:identifier id="bookid">urn:isbn:</dc:identifier>
+<dc:format>10 Pages</dc:format>
+<dc:type>Text</dc:type>
+<dc:rights>&#x00A9; 2025 Curriculum Associates, LLC</dc:rights>
+<dc:language>en</dc:language>
+<dc:date>2025</dc:date>
+<dc:publisher>Curriculum Associates</dc:publisher>
+<meta refines="#en_title" property="title-type">main</meta>
+<meta refines="#en_title" property="file-as">CHAPTER 3 Cells</meta>
+<meta refines="#isbn" property="source-of">pagination</meta>
+<meta property="dcterms:modified">2025-03-12T10:20:00Z</meta>
+<meta name="cover" content="cover-image"/>
+<meta property="schema:accessMode">textual</meta>
+<meta property="schema:accessMode">visual</meta>
+<meta property="schema:accessModeSufficient">textual,visual</meta>
+<meta property="schema:accessModeSufficient">textual</meta>
+<meta property="schema:accessibilityFeature">alternativeText</meta>
+<meta property="schema:accessibilityFeature">structuralNavigation</meta>
+<meta property="schema:accessibilityFeature">pageBreakMarkers</meta>
+<meta property="schema:accessibilityFeature">pageNavigation</meta>
+<meta property="schema:accessibilityFeature">ARIA</meta>
+<meta property="schema:accessibilityFeature">readingOrder</meta>
+<meta property="schema:accessibilityFeature">displayTransformability</meta>
+<meta property="schema:accessibilityFeature">tableOfContents</meta>
+<meta property="schema:accessibilityHazard">none</meta>
+<meta property="schema:accessibilitySummary">This title is a well-marked up and structured book, which is fully accessible. This book contains images, table of content, page-list, landmark, reading order, Structural Navigation, Unit Opener, Unit 2 Glossary of Terms, Unit 2 Credits, and semantic structure, short alt texts are provided. This ebook passes Daisy’s Ace WCAG 2.2 Level AA checks. Additionally, blank pages have been removed from the ebook, while their page break labels have been left in for reasons of structural flow.</meta>
+<link href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa" rel="dcterms:conformsTo"/>
+<meta refines="#id" property="role" scheme="marc:relators">aut</meta>
+<meta refines="#id" property="file-as">Associates, Curriculum</meta>
+</metadata>
+<manifest>
+<item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+<item id="aastylesheet" href="styles/stylesheet.css" media-type="text/css"/>
+<item id="Cover" href="xhtml/Cover.xhtml" media-type="application/xhtml+xml"/>
+<item id="Title" href="xhtml/title.xhtml" media-type="application/xhtml+xml"/>
+<item id="c0" href="xhtml/Overview.xhtml" media-type="application/xhtml+xml"/>
+<item id="c1" href="xhtml/Chap_01.xhtml" media-type="application/xhtml+xml"/>
+<item id="c2" href="xhtml/Chap_02.xhtml" media-type="application/xhtml+xml"/>
+<item id="c3" href="xhtml/Chap_03.xhtml" media-type="application/xhtml+xml"/>
+<item id="c4" href="xhtml/Chap_04.xhtml" media-type="application/xhtml+xml"/>
+<item id="c5" href="xhtml/Chap_05.xhtml" media-type="application/xhtml+xml"/>
+<item id="c6" href="xhtml/Chap_06.xhtml" media-type="application/xhtml+xml"/>
+<item id="c7" href="xhtml/Chap_07.xhtml" media-type="application/xhtml+xml"/>
+<item id="c8" href="xhtml/Summary.xhtml" media-type="application/xhtml+xml"/>
+<item id="c9" href="xhtml/Review_questions.xhtml" media-type="application/xhtml+xml"/>
+<item id="c10" href="xhtml/Discussion_questions.xhtml" media-type="application/xhtml+xml"/>
+<item id="img1" href="images/p28_1.png" media-type="image/png"/>
+<item id="img2" href="images/p30_1.png" media-type="image/png"/>
+<item id="img3" href="images/p30_2.png" media-type="image/png"/>
+<item id="img4" href="images/p32_1.png" media-type="image/png"/>
+<item id="img5" href="images/p33_1.png" media-type="image/png"/>
+<item id="img6" href="images/p34_1.png" media-type="image/png"/>
+<item id="img7" href="images/p35_1.png" media-type="image/png"/>
+<item id="img8" href="images/p36_1.png" media-type="image/png"/>
+<item id="img9" href="images/p37_1.png" media-type="image/png"/>
+<item id="img10" href="images/p38_1.png" media-type="image/png"/>
+<item id="img11" href="images/p39_1.png" media-type="image/png"/>
+<item id="img12" href="images/p40_1.png" media-type="image/png"/>
+<item id="img13" href="images/p40_2.png" media-type="image/png"/>
+<item id="img14" href="images/p41_1.png" media-type="image/png"/>
+<item id="img15" href="images/p42_1.png" media-type="image/png"/>
+<item id="img16" href="images/p43_1.png" media-type="image/png"/>
+<item id="img17" href="images/p44_1.png" media-type="image/png"/>
+<item id="img18" href="images/p45_1.png" media-type="image/png"/>
+<item id="img19" href="images/p46_1.png" media-type="image/png"/>
+<item id="img20" href="images/p47_1.png" media-type="image/png"/>
+<item id="img21" href="images/p48_1.png" media-type="image/png"/>
+<item id="cover-image" href="images/cover_image.png" media-type="image/png" properties="cover-image"/>
+<item id="font1" href="fonts/Oswald-VariableFont_wght.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="font2" href="fonts/ARIAL.TTF" media-type="application/vnd.ms-opentype"/>
+<item id="font3" href="fonts/times.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="font4" href="fonts/OpenSans-Bold.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="font5" href="fonts/OpenSans-BoldItalic.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="font6" href="fonts/OpenSans-Italic.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="font7" href="fonts/OpenSans-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="font8" href="fonts/OpenSans_Semibold.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="font9" href="fonts/OpenSans_SemiCondensed-Bold.ttf" media-type="application/vnd.ms-opentype"/>
+</manifest>
+<spine toc="ncx">
+<itemref idref="Cover" linear="yes"/>
+<itemref idref="Title"/>
+<itemref idref="c0"/>
+<itemref idref="c1"/>
+<itemref idref="c2"/>
+<itemref idref="c3"/>
+<itemref idref="c4"/>
+<itemref idref="c5"/>
+<itemref idref="c6"/>
+<itemref idref="c7"/>
+<itemref idref="c8"/>
+<itemref idref="c9"/>
+<itemref idref="c10"/>
+</spine>
+<guide>
+<reference type="cover" title="Cover Image" href="xhtml/Cover.xhtml"/>
+<reference type="toc" title="LESSON 3 Cells" href="nav.xhtml"/>
+<reference type="toc" title="LESSON 3 Cells" href="xhtml/Chap_01.xhtml"/>
+</guide>
+</package>
